@@ -1,0 +1,119 @@
+addable_block_types: 
+  core-columns: 
+    order: 7
+    panel: 1
+    shortcut: 0
+  core-horizontalrule: 
+    order: 5
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 3
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 1
+    shortcut: 1
+  custom-bgcolor_contents: 
+    order: 13
+    panel: 0
+    shortcut: 0
+  custom-bgimage_contents: 
+    order: 14
+    panel: 0
+    shortcut: 0
+  custom-blog_module: 
+    order: 11
+    panel: 0
+    shortcut: 0
+  custom-chat: 
+    order: 26
+    panel: 1
+    shortcut: 0
+  custom-chat_unit: 
+    order: 25
+    panel: 0
+    shortcut: 0
+  custom-contents: 
+    order: 15
+    panel: 0
+    shortcut: 0
+  custom-contents_collumn2: 
+    order: 17
+    panel: 0
+    shortcut: 0
+  custom-contents_collumn3: 
+    order: 18
+    panel: 0
+    shortcut: 0
+  custom-custom_img: 
+    order: 19
+    panel: 1
+    shortcut: 0
+  custom-custom_img_media: 
+    order: 21
+    panel: 0
+    shortcut: 0
+  custom-custom_img_srcset: 
+    order: 22
+    panel: 0
+    shortcut: 0
+  custom-dl: 
+    order: 24
+    panel: 1
+    shortcut: 0
+  custom-dl_unit: 
+    order: 23
+    panel: 1
+    shortcut: 0
+  custom-header_sholder: 
+    order: 12
+    panel: 0
+    shortcut: 0
+  custom-lineimage: 
+    order: 16
+    panel: 0
+    shortcut: 0
+  custom-link_button: 
+    order: 10
+    panel: 0
+    shortcut: 0
+  custom-link_with_title: 
+    order: 20
+    panel: 1
+    shortcut: 0
+  custom-titlearea_large: 
+    order: 8
+    panel: 0
+    shortcut: 0
+  custom-titlearea_midiumn: 
+    order: 9
+    panel: 0
+    shortcut: 0
+  mt-file: 
+    order: 2
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  sixapart-oembed: 
+    order: 4
+    panel: 1
+    shortcut: 0
+can_remove_block: 0
+class_name: ￥
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"label\":\"テキスト\",\"className\":\"text\",\"blockElement\":\"p\"},\"2\":{\"text\":\"\"},\"3\":{\"label\":\"URL\",\"className\":\"url\",\"blockElement\":\"p\"},\"4\":{\"label\":\"カラー\",\"className\":\"color\",\"blockElement\":\"p\",\"options\":\"primary\\nsecondary\\nsuccess\\ndanger\\nwarning\\ninfo\\nlight\\ndark\\noutline-primary\\noutline-secondary\\noutline-success\\noutline-danger\\noutline-warning\\noutline-info\\noutline-light\\noutline-dark\"},\"5\":{\"text\":\"primary\"},\"6\":{\"label\":\"サイズ\",\"className\":\"size\",\"blockElement\":\"p\",\"options\":\"lg\\nmd\\nsm\"},\"7\":{\"text\":\"default\"},\"8\":{\"label\":\"target属性\",\"helpText\":\"_blank を選択すると、新しいウィンドでリンクを開きます。\",\"className\":\"target\",\"blockElement\":\"p\",\"options\":\"_self\\n_blank\"},\"9\":{\"text\":\"_self\"}}' --><!-- /mt-beb --><!-- mt-beb t=\"sixapart-input\" m='1,2' --><p class=\"text\"></p><!-- /mt-beb --><!-- mt-beb t=\"sixapart-input\" m='3,2' --><p class=\"url\"></p><!-- /mt-beb --><!-- mt-beb t=\"sixapart-select\" m='4,5' --><p class=\"color\">primary</p><!-- /mt-beb --><!-- mt-beb t=\"sixapart-select\" m='6,7' --><p class=\"size\">default</p><!-- /mt-beb --><!-- mt-beb t=\"sixapart-select\" m='8,9' --><p class=\"target\">_self</p><!-- /mt-beb -->"
+icon: ''
+identifier: link_button
+label: "リンクボタン"
+preview_header: "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\r\n\r\n<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return\r\n\r\n  const data = {\r\n    text: document.querySelector('.text')?.textContent || '',\r\n    url: document.querySelector('.url')?.textContent || '',\r\n    color: document.querySelector('.color')?.textContent || '',\r\n    size: document.querySelector('.size')?.textContent || '',\r\n    target: document.querySelector('.target')?.textContent || '_self',\r\n  }\r\n\r\n  MTBlockEditorSetCompiledHtml(`\r\n    <a class=\"btn btn-${data.color} btn-${data.size}\" href=\"${data.url}\" target=\"${data.target}\">${data.text}</a>\r\n  `)\r\n});\r\n</script>\r\n"
+root_block: ''
+scope: blog
+show_preview: 1

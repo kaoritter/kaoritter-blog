@@ -1,0 +1,66 @@
+<$mt:Include module="共通変数" strip_linefeeds="1"$>
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><$mt:PageTitle encode_html="html"$> - <$mt:BlogName encode_html="1"$></title>
+  <meta name="generator" content="<$mt:ProductName version="1"$>">
+  <meta name="description" content="<$mt:PageExcerpt$>">
+  <meta name="keywords" content="<$mt:GetVar name="meta_keywords"$><$mt:PageKeywords$>">
+  <link rel="shortcut icon" type="image/x-icon" href="<$mt:BlogURL encode_html="1"$>common/images/favicon.ico">
+  <link rel="start" href="<$mt:BlogURL encode_html="1"$>">
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>">
+  <$mt:CanonicalLink$>
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="<$mt:BlogLanguage setvar="blog_lang"$><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><$mt:Var name="blog_lang"$></mt:If>">
+  <meta property="og:title" content="<$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$>">
+  <meta property="og:url" content="<$mt:PagePermalink encode_html="1"$>">
+  <meta property="og:description" content="<$mt:PageExcerpt$>">
+  <meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>">
+  <meta property="og:image" content="<mt:If tag="CustomFieldValue" identifier="blog_entry_ogp_image"><mt:CustomFieldAsset identifier="blog_entry_ogp_image"><$mt:AssetThumbnailURL width="1200"$></mt:CustomFieldAsset><mt:Else><mt:EntryAssets type="image" sort_order="ascend" limit="1"><$mt:AssetThumbnailURL width="1200"$><mt:Else><$mt:BlogURL encode_html="1"$>common/images/noimage_ogp.png</mt:EntryAssets></mt:If>">
+  <meta property="fb:app_id" content="<$mt:Var name='fb_app_id'$>">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@<$mt:Var name='twitter_via'$>">
+  <meta name="twitter:title" content="<$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$>">
+  <meta name="twitter:description" content="<$mt:PageExcerpt remove_html="1" encode_html="1"$>">
+  <meta name="twitter:image" content="<$mt:BlogURL encode_html="1"$>common/images/noimage_ogp.png">
+  <!-- Microdata -->
+  <meta itemprop="description" content="<$mt:PageExcerpt$>">
+  <link itemprop="url" href="<$mt:PagePermalink encode_html="1"$>">
+  <link itemprop="image" href="<$mt:BlogURL encode_html="1"$>common/images/noimage_ogp.png">
+  <$mt:Include module="ヘッダースクリプト"$>
+</head>
+<body>
+  <$mt:Include module="ヘッダー"$>
+  <!-- content: start -->
+  <div id="content" class="clearfix">
+    <div id="main-wrapper">
+      <main role="main">
+        <article id="entry-<$mt:PageID$>" class="entry">
+          <h2 class="entry-title"><$mt:PageTitle encode_html="1"$></h2>
+          <section id="entry-social-buttons">
+            <$mt:Include module="記事ソーシャルボタン"$>
+          </section>
+
+          <section class="wysiwyg">
+            <$mt:EntryBody convert_breaks="1"$>
+            <$mt:EntryMore convert_breaks="1"$>
+          </section><!-- wysiwyg -->
+
+          <section id="entry-social-buttons">
+            <$mt:Include module="記事ソーシャルボタン"$>
+          </section>
+        </article>
+      </main>
+    </div><!-- /#main-wrapper -->
+
+    <aside>
+      <$mt:Include module="サイドバー"$>
+    </aside>
+  </div>
+  <!-- content: end -->
+  <$mt:Include module="フッター"$>
+</body>
+</html>

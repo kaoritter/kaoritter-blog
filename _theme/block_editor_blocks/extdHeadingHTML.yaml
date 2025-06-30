@@ -1,0 +1,87 @@
+addable_block_types: 
+  core-columns: 
+    order: 7
+    panel: 1
+    shortcut: 0
+  core-horizontalrule: 
+    order: 5
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 3
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 1
+    shortcut: 1
+  custom-bgcolor_contents: 
+    order: 13
+    panel: 0
+    shortcut: 0
+  custom-bgimage_contents: 
+    order: 14
+    panel: 0
+    shortcut: 0
+  custom-blog_module: 
+    order: 11
+    panel: 0
+    shortcut: 0
+  custom-contents: 
+    order: 15
+    panel: 0
+    shortcut: 0
+  custom-contents_collumn2: 
+    order: 17
+    panel: 0
+    shortcut: 0
+  custom-contents_collumn3: 
+    order: 18
+    panel: 0
+    shortcut: 0
+  custom-header_sholder: 
+    order: 12
+    panel: 0
+    shortcut: 0
+  custom-lineimage: 
+    order: 16
+    panel: 0
+    shortcut: 0
+  custom-link_button: 
+    order: 10
+    panel: 0
+    shortcut: 0
+  custom-titlearea_large: 
+    order: 8
+    panel: 0
+    shortcut: 0
+  custom-titlearea_midiumn: 
+    order: 9
+    panel: 0
+    shortcut: 0
+  mt-file: 
+    order: 2
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  sixapart-oembed: 
+    order: 4
+    panel: 1
+    shortcut: 0
+can_remove_block: 0
+class_name: ''
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"label\":\"見出しアイコン\",\"helpText\":\"行頭に挿入したい HTML を記述します\",\"className\":\"headingSpecification\",\"blockElement\":\"p\"},\"2\":{\"text\":\"\"},\"3\":{\"label\":\"見出しテキスト\",\"helpText\":\"h1/h2 などの指定はリッチテキストエディタで指定します\",\"className\":\"heading\"}}' --><!-- /mt-beb --><!-- mt-beb t=\"sixapart-input\" m='1,2' --><p class=\"headingSpecification\"></p><!-- /mt-beb --><!-- mt-beb m='3' --><h3 class=\"heading\">見出し</h3><!-- /mt-beb -->"
+icon: data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjMuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuODrOOCpOODpOODvF8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiCgkgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMzMjdCQjc7fQoJLnN0MXtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCw3My4yQzAsMzIuOCwzMi43LDAsNzMuMSwwaDM2NS43QzQ3OS4xLDAsNTEyLDMyLjcsNTEyLDczLjF2MzY1LjdjMCw0MC4zLTMyLjgsNzMuMS03My4xLDczLjFINzMuMQoJQzMyLjcsNTEyLDAsNDc5LjIsMCw0MzguOVY3My4yeiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDIxLjUsMTE4LjF2Mjc1LjhoMjcuNmM3LjYsMCwxMy44LDYuMiwxMy44LDEzLjh2MjcuNmMwLDcuNi02LjIsMTMuOC0xMy44LDEzLjhIMzExLjIKCWMtNy42LDAtMTMuOC02LjItMTMuOC0xMy44di0yNy42YzAtNy42LDYuMi0xMy44LDEzLjgtMTMuOGgyNy42VjI4My42SDE3My4zdjExMC4zaDI3LjZjNy42LDAsMTMuOCw2LjIsMTMuOCwxMy44djI3LjYKCWMwLDcuNi02LjIsMTMuOC0xMy44LDEzLjhINjIuOWMtNy42LDAtMTMuOC02LjItMTMuOC0xMy44di0yNy42YzAtNy42LDYuMi0xMy44LDEzLjgtMTMuOGgyNy42VjExOC4xSDYyLjkKCWMtNy42LDAtMTMuOC02LjItMTMuOC0xMy44Vjc2LjdjMC03LjYsNi4yLTEzLjgsMTMuOC0xMy44aDEzNy45YzcuNiwwLDEzLjgsNi4yLDEzLjgsMTMuOHYyNy42YzAsNy42LTYuMiwxMy44LTEzLjgsMTMuOGgtMjcuNgoJdjExMC4zaDE2NS41VjExOC4xaC0yNy42Yy03LjYsMC0xMy44LTYuMi0xMy44LTEzLjhWNzYuN2MwLTcuNiw2LjItMTMuOCwxMy44LTEzLjhoMTM3LjljNy42LDAsMTMuOCw2LjIsMTMuOCwxMy44djI3LjYKCWMwLDcuNi02LjIsMTMuOC0xMy44LDEzLjhINDIxLjV6Ii8+Cjwvc3ZnPgo=
+identifier: extdHeadingHTML
+label: "見出し"
+preview_header: "<script>\r\ndocument.addEventListener(\"DOMContentLoaded\", () => {\r\n  if (document.body.dataset.hasCompiledHtml) {\r\n    return;\r\n  }\r\n\r\n// heading ブロック要素を取得\r\nconst heading = document.querySelector(\".heading\");\r\n\r\n// heading ブロックの文字列をアンカーリンク用に id として追加（スペースをアンダーバーに置換）\r\nconst anchorId = document.querySelector(\".heading\").textContent.replace(/\\s+/g,'_');\r\nheading.setAttribute(\"id\", anchorId);\r\n\r\n// iconSpecification ブロックに記述された内容を取得\r\nconst headingSpecification = document.querySelector(\".headingSpecification\").innerText;\r\n\r\n// headingSpecification ブロック要素を削除\r\nconst headingSpecificationElm = document.querySelector(\".headingSpecification\");\r\nheadingSpecificationElm.remove();\r\n\r\n// .heading 内の最初の子要素として headingを挿入 \r\nconst headingElm = headingSpecification;\r\nheading.insertAdjacentHTML('afterbegin', headingElm);\r\n\r\n// 加工したブロックを取得\r\nconst blockContent = document.body.innerHTML;\r\n\r\n// 加工したブロック内要素を出力\r\nMTBlockEditorSetCompiledHtml(`\r\n      ${blockContent}\r\n  `);\r\n});\r\n</script>\r\n\r\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css\" integrity=\"sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=\" crossorigin=\"anonymous\">\r\n\r\n<style>\r\n.heading {\r\n  font-weight: normal;\r\n  display: block;\r\n  margin-bottom:1.2rem\r\n}\r\n.heading i {\r\n  margin-right: 0.5rem\r\n}\r\nh1.heading {\r\n\r\n}\r\nh2.heading {\r\n\r\n}\r\nh3.heading {\r\n\r\n}\r\nh4.heading {\r\n\r\n}\r\nh5.heading {\r\n\r\n}\r\nh6.heading {\r\n\r\n}\r\n</style>"
+root_block: ''
+scope: blog
+show_preview: 1

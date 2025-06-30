@@ -1,0 +1,55 @@
+addable_block_types: 
+  core-columns: 
+    order: 7
+    panel: 1
+    shortcut: 0
+  core-horizontalrule: 
+    order: 5
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 3
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 1
+    shortcut: 1
+  custom-extdHeadingHTML: 
+    order: 9
+    panel: 1
+    shortcut: 0
+  custom-link_button: 
+    order: 10
+    panel: 1
+    shortcut: 0
+  custom-tableOfContents: 
+    order: 8
+    panel: 1
+    shortcut: 0
+  mt-file: 
+    order: 2
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  sixapart-oembed: 
+    order: 4
+    panel: 1
+    shortcut: 0
+can_remove_block: 0
+class_name: ''
+html: "<!-- mt-beb t=\"core-html\" --><div class=\"sample-ToC\">\r\n  <div>この記事の目次</div>\r\n  <nav>\r\n    <ul class=\"sample-ToC__list\"></ul>\r\n  </nav>\r\n</div><!-- /mt-beb -->"
+icon: ''
+identifier: table_of_contents
+label: "目次"
+preview_header: ''
+root_block: ''
+scope: blog
+show_preview: 1

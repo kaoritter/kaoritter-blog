@@ -1,0 +1,504 @@
+id: "20250630_kaoritterblog"
+label: "20250630_kaoritterblog"
+version: "1.0.4"
+author_link: "https://www.kaoritter.com/"
+author_name: "@kaoritter BLOG"
+description: "20250630_kaoritterblog"
+class: "blog"
+elements:
+  block_display_options:
+    component: ~
+    data:
+      page:
+        core-columns:
+          order: 7
+          panel: 1
+          shortcut: 0
+        core-horizontalrule:
+          order: 5
+          panel: 1
+          shortcut: 0
+        core-html:
+          order: 3
+          panel: 1
+          shortcut: 0
+        core-table:
+          order: 6
+          panel: 1
+          shortcut: 0
+        core-text:
+          order: 0
+          panel: 1
+          shortcut: 1
+        custom-extdHeadingHTML:
+          order: 9
+          panel: 1
+          shortcut: 0
+        custom-link_button:
+          order: 10
+          panel: 1
+          shortcut: 0
+        custom-tableOfContents:
+          order: 8
+          panel: 1
+          shortcut: 0
+        mt-file:
+          order: 2
+          panel: 1
+          shortcut: 1
+        mt-image:
+          order: 1
+          panel: 1
+          shortcut: 1
+        sixapart-oembed:
+          order: 4
+          panel: 1
+          shortcut: 0
+      post:
+        core-columns:
+          order: 7
+          panel: 1
+          shortcut: 0
+        core-horizontalrule:
+          order: 5
+          panel: 1
+          shortcut: 0
+        core-html:
+          order: 3
+          panel: 1
+          shortcut: 0
+        core-table:
+          order: 6
+          panel: 1
+          shortcut: 0
+        core-text:
+          order: 0
+          panel: 1
+          shortcut: 1
+        custom-extdHeadingHTML:
+          order: 9
+          panel: 1
+          shortcut: 0
+        custom-link_button:
+          order: 10
+          panel: 1
+          shortcut: 0
+        custom-tableOfContents:
+          order: 8
+          panel: 1
+          shortcut: 0
+        mt-file:
+          order: 2
+          panel: 1
+          shortcut: 1
+        mt-image:
+          order: 1
+          panel: 1
+          shortcut: 1
+        sixapart-oembed:
+          order: 4
+          panel: 1
+          shortcut: 0
+      thumbnail-image:
+        core-columns:
+          order: 7
+          panel: 0
+          shortcut: 0
+        core-horizontalrule:
+          order: 5
+          panel: 0
+          shortcut: 0
+        core-html:
+          order: 3
+          panel: 0
+          shortcut: 0
+        core-table:
+          order: 6
+          panel: 0
+          shortcut: 0
+        core-text:
+          order: 0
+          panel: 1
+          shortcut: 1
+        custom-extdHeadingHTML:
+          order: 9
+          panel: 0
+          shortcut: 0
+        custom-link_button:
+          order: 10
+          panel: 0
+          shortcut: 0
+        custom-tableOfContents:
+          order: 8
+          panel: 0
+          shortcut: 0
+        mt-file:
+          order: 2
+          panel: 0
+          shortcut: 0
+        mt-image:
+          order: 1
+          panel: 1
+          shortcut: 1
+        sixapart-oembed:
+          order: 4
+          panel: 0
+          shortcut: 0
+    importer: block_display_options
+  block_editor_blocks:
+    component: block_editor
+    data:
+      code:
+        label: "ソースコード"
+        scope: blog
+      extdHeadingHTML:
+        label: "見出し"
+        scope: blog
+      link_button:
+        label: "リンクボタン"
+        scope: blog
+      tableOfContents:
+        label: "目次_kusap"
+        scope: blog
+      table_of_contents:
+        label: "目次"
+        scope: blog
+    importer: block_editor_blocks
+  blog_static_files:
+    component: ~
+    data:
+      - common
+    importer: blog_static_files
+  custom_fields:
+    component: commercial
+    data:
+      blog_entry_ogp_image:
+        default: ''
+        description: "Open Graph Protocol のプロパティ og:image に設定する画像を設定できます。また、記事のサムネイル画像にも利用されます。"
+        name: "OGP イメージ"
+        obj_type: post
+        options: ''
+        required: 0
+        type: asset_image
+      blog_page_ogp_image:
+        default: ''
+        description: "Open Graph Protocol のプロパティ og:image に設定する画像を設定できます。また、記事のサムネイル画像にも利用されます。"
+        name: "OGPイメージ"
+        obj_type: page
+        options: ''
+        required: 0
+        type: asset_image
+      entry_recommend:
+        default: 0
+        description: "サイドバーのオススメ記事に表示させる場合にチェックをいれます。"
+        name: "オススメ記事"
+        obj_type: post
+        options: ''
+        required: 0
+        type: checkbox
+      logo_images:
+        default: ''
+        description: "ヘッダーに表示されるタイトルロゴの画像をアップロードします。"
+        name: "タイトルロゴ"
+        obj_type: blog
+        options: ''
+        required: 0
+        type: asset_image
+      writer_facebook:
+        default: ''
+        description: "Facebook ページまたは個人アカウントのURLの、ドメイン直下のディレクトリ名のみを記入ください。例：https://www.facebook.com/sixapartkk の場合は「sixapartkk」"
+        name: "記事執筆者のFacebookアカウント"
+        obj_type: member
+        options: ''
+        required: 0
+        type: text
+      writer_instagram:
+        default: ''
+        description: "InstagramのURLの、ドメイン直下のディレクトリ名のみを記入ください。例：https://www.instagram.com/sixapartkk の場合は「sixapartkk」"
+        name: "記事執筆者のInstagramアカウント"
+        obj_type: member
+        options: ''
+        required: 0
+        type: text
+      writer_name:
+        default: ''
+        description: "記事上部、最下部のプロフィール枠などで利用する記事執筆者名です"
+        name: "記事執筆者の名前"
+        obj_type: member
+        options: ''
+        required: 0
+        type: text
+      writer_owner:
+        default: ''
+        description: "このブログのオーナーである場合はチェックを入れます。"
+        name: "ブログオーナー"
+        obj_type: member
+        options: ''
+        required: 0
+        type: checkbox
+      writer_profile:
+        default: ''
+        description: "記事本文下のプロフィール枠に表示される、プロフィール文章です"
+        name: "記事執筆者のプロフィール文"
+        obj_type: member
+        options: none
+        required: 0
+        type: textarea
+      writer_profilephoto:
+        default: ''
+        description: "記事上部、最下部のプロフィール枠などで利用する記事執筆者のプロフィール写真です。丸く切り抜いて使われます。正方形サイズの画像を登録してください。"
+        name: "記事執筆者のプロフィール写真"
+        obj_type: member
+        options: ''
+        required: 0
+        type: asset_image
+      writer_title:
+        default: ''
+        description: "記事上部、最下部のプロフィール枠などで利用する記事執筆者の肩書きです。"
+        name: "記事執筆者の肩書き"
+        obj_type: member
+        options: ''
+        required: 0
+        type: text
+      writer_twitter:
+        default: ''
+        description: "Twitterアカウントの@以降のみを記入ください。例：@sixapartkk の場合は「sixapartkk」"
+        name: "記事執筆者のTwitterアカウント"
+        obj_type: member
+        options: ''
+        required: 0
+        type: text
+    importer: custom_fields
+  entry_format_prefs:
+    component: ~
+    data:
+      page:
+        convert_breaks: use_previous
+        text_filters:
+          - 0
+          - __default__
+          - markdown
+          - richtext
+          - block_editor
+      post:
+        convert_breaks: use_previous
+        text_filters:
+          - 0
+          - __default__
+          - markdown
+          - richtext
+          - block_editor
+    importer: entry_format_prefs
+  field_display_options:
+    component: ~
+    data:
+      blog:
+        field.logo_images:
+          display: default
+          order: 0
+      member:
+        field.writer_facebook:
+          display: default
+          order: 5
+        field.writer_instagram:
+          display: default
+          order: 6
+        field.writer_name:
+          display: default
+          order: 0
+        field.writer_owner:
+          display: default
+          order: 7
+        field.writer_profile:
+          display: default
+          order: 1
+        field.writer_profilephoto:
+          display: default
+          order: 3
+        field.writer_title:
+          display: default
+          order: 2
+        field.writer_twitter:
+          display: default
+          order: 4
+      page:
+        excerpt:
+          display: default
+          order: 2
+        field.blog_page_ogp_image:
+          display: default
+          order: 1
+        keywords:
+          display: default
+          order: 3
+        text:
+          display: default
+          order: 0
+      post:
+        excerpt:
+          display: default
+          order: 3
+        field.blog_entry_ogp_image:
+          display: default
+          order: 2
+        field.entry_recommend:
+          display: default
+          order: 1
+        keywords:
+          display: default
+          order: 4
+        text:
+          display: default
+          order: 0
+    importer: field_display_options
+  template_set:
+    component: core
+    data:
+      base_path: templates
+      templates:
+        archive:
+          author_entry_listing:
+            filename: author_entry_listing.mtml
+            label: "投稿者別記事リスト"
+            mappings:
+              author:
+                archive_type: Author
+                file_template: "%a/%i"
+                preferred: 1
+          category_entry_listing:
+            filename: category_entry_listing.mtml
+            label: "カテゴリ別記事リスト"
+            mappings:
+              category:
+                archive_type: Category
+                file_template: "%-c/%i"
+                preferred: 1
+          monthly_entry_listing:
+            filename: monthly_entry_listing.mtml
+            label: "月別記事リスト"
+            mappings:
+              monthly:
+                archive_type: Monthly
+                file_template: "%y/%m/%i"
+                preferred: 1
+          yearly_entry_listing:
+            filename: yearly_entry_listing.mtml
+            label: "年別記事リスト"
+            mappings:
+              yearly:
+                archive_type: Yearly
+                file_template: "%y/%i"
+                preferred: 1
+                start_month: 1
+        index:
+          feed_recent:
+            filename: atom.xml.mtml
+            label: "最新記事のフィード"
+            outfile: atom.xml
+            rebuild_me: 1
+          index_css:
+            filename: common/css/styles.css.mtml
+            label: "スタイルシート"
+            outfile: common/css/styles.css
+            rebuild_me: 1
+          index_js:
+            filename: common/js/main.js.mtml
+            label: JavaScript
+            outfile: common/js/main.js
+            rebuild_me: 1
+          index_rsd:
+            filename: rsd.xml.mtml
+            label: RSD
+            outfile: rsd.xml
+            rebuild_me: 1
+          index_top_page:
+            filename: index.html.mtml
+            label: "メインページ"
+            outfile: index.html
+            rebuild_me: 1
+          search:
+            filename: search.html.mtml
+            label: "検索結果"
+            outfile: search.html
+            rebuild_me: 1
+        individual:
+          entry:
+            filename: entry.mtml
+            label: "記事"
+            mappings:
+              individual:
+                archive_type: Individual
+                file_template: archives/%y/%m%d_%h%n%s%x
+                preferred: 1
+        module:
+          cbtableofcontents:
+            filename: cbtableofcontents.mtml
+            label: cbTableOfContents
+          css:
+            filename: css.mtml
+            label: "アプリーチCSS"
+          json_ld:
+            filename: json_ld.mtml
+            label: JSON-LD
+          module_entry_social_btn:
+            filename: module_entry_social_btn.mtml
+            label: "記事ソーシャルボタン"
+          module_follow:
+            filename: module_follow.mtml
+            label: "フォローアクション"
+          module_footer:
+            filename: module_footer.mtml
+            label: "フッター"
+          module_footer_social:
+            filename: module_footer_social.mtml
+            label: "フッター（ソーシャルボタン）"
+          module_google_analytics:
+            filename: module_google_analytics.mtml
+            label: "Google アナリティクス"
+          module_header:
+            filename: module_header.mtml
+            label: "ヘッダー"
+          module_header_script:
+            filename: module_header_script.mtml
+            label: "ヘッダースクリプト"
+          module_list_entries:
+            filename: module_list_entries.mtml
+            label: "記事一覧"
+          module_sidebar:
+            filename: module_sidebar.mtml
+            label: "サイドバー"
+          module_swiper:
+            filename: module_swiper.mtml
+            label: "イメージスライダー"
+          module_variables:
+            filename: module_variables.mtml
+            label: "共通変数"
+          sample_toc__list:
+            filename: sample_toc__list.mtml
+            label: sample-ToC__list
+        page:
+          page:
+            filename: page.mtml
+            label: "ウェブページ"
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
+        system:
+          404_error:
+            filename: 404_error.mtml
+            label: "404 エラー"
+          editor_css:
+            filename: editor_css.mtml
+            label: "エディタCSS"
+          thumbnail_image:
+            filename: thumbnail_image.mtml
+            label: "サムネイル画像"
+    importer: template_set
+  thumbnail_image:
+    component: ~
+    data:
+      show_thumbnail_editor: 1
+    importer: thumbnail_image
+

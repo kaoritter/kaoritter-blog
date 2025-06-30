@@ -1,0 +1,39 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const selector = {
+    ToCList: '.sample-ToC__list', // ul あるいは ol 要素。li が挿入される。
+    entryBody: '.wysiwyg', // 記事本文を囲う要素。この中から見出しを探し出す。
+    entryHeadings: 'h1, h2, h3, h4, h5, h6', // 目次として表示させたい要素。
+  }
+
+  const ToCList = document.querySelectorAll(selector.ToCList)
+  if ( 0 === ToCList.length ) return
+
+  const entryHeadings = document.querySelector(selector.entryBody)?.querySelectorAll(selector.entryHeadings) || []
+  if ( 0 === entryHeadings.length ) {
+    ToCList.forEach(item => item.classList.add('heading-not-found') )
+    return
+  }
+  
+  const fragment = document.createDocumentFragment()
+  const li = document.createElement('li')
+  const a = document.createElement('a')
+
+  entryHeadings.forEach((heading, index) => {
+    heading.id = heading.id || `sample-ToC-${index}`
+
+    const link = a.cloneNode(false)
+    link.href = `#${heading.id}`
+    link.textContent = heading.textContent
+    link.addEventListener( 'click', e => window.scrollTo({ top: e.target.getBoundingClientRect().top, behavior: "smooth" }) )
+
+    const item = li.cloneNode(false)
+    item.dataset.originalTag = heading.tagName
+    item.appendChild(link)
+
+    fragment.appendChild(item)
+  })
+
+  ToCList.forEach(item => item.appendChild(fragment.cloneNode(true)))
+})
+</script>

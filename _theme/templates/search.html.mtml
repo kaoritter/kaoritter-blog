@@ -1,0 +1,58 @@
+<$mt:Include module="共通変数" strip_linefeeds="1"$>
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><$mt:BlogName encode_html="1"$></title>
+  <meta name="generator" content="<$mt:ProductName version="1"$>">
+  <meta name="description" content="<$mt:BlogDescription remove_html="1" encode_html="1"$>">
+  <meta name="keywords" content="<$mt:GetVar name="meta_keywords"$>">
+  <link rel="shortcut icon" type="image/x-icon" href="<$mt:BlogURL encode_html="1"$>common/images/favicon.ico">
+  <link rel="start" href="<$mt:BlogURL encode_html="1"$>">
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>">
+  <$mt:CanonicalLink$>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="<$mt:BlogLanguage setvar="blog_lang"$><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><$mt:Var name="blog_lang"$></mt:If>">
+  <meta property="og:title" content="<$mt:BlogName encode_html="1"$>">
+  <meta property="og:url" content="<$mt:BlogURL encode_html="1"$>">
+  <meta property="og:description" content="<$mt:BlogDescription remove_html="1" encode_html="1"$>">
+  <meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>">
+  <meta property="og:image" content="<$mt:BlogURL encode_html="1"$>common/images/noimage_ogp.png">
+  <meta property="fb:app_id" content="<$mt:Var name='fb_app_id'$>">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@<$mt:Var name='twitter_via'$>">
+  <meta name="twitter:title" content="<$mt:BlogName encode_html="1"$>">
+  <meta name="twitter:description" content="<$mt:BlogDescription remove_html="1" encode_html="1"$>">
+  <meta name="twitter:image" content="<$mt:BlogURL encode_html="1"$>common/images/noimage_ogp.png">
+  <!-- Microdata -->
+  <meta itemprop="description" content="<$mt:BlogDescription remove_html="1" encode_html="1"$>">
+  <link itemprop="url" href="<$mt:BlogURL encode_html="1"$>">
+  <link itemprop="image" href="<$mt:BlogURL encode_html="1"$>common/images/noimage_ogp.png">
+  <$mt:Include module="ヘッダースクリプト"$>
+  </head>
+<body>
+  <$mt:Include module="ヘッダー"$>
+  <!-- content: start -->
+  <div id="content" class="clearfix">
+    <div id="main-wrapper">
+      <main role="main">
+        <section id="top-entries" class="entrylist">
+            <h1 class="page-title">”<span id="search-output"></span>”の検索結果</h1>
+            <div id="s-result">
+              <!-- search result -->
+            </div>
+          <$mt:ServiceWorkerSnippet pn_auto_spawn="0"$>
+        </section>
+      </main>
+    </div>
+
+    <aside>
+      <$mt:Include module="サイドバー"$>
+    </aside>
+  </div>
+  <!-- content: end -->
+  <$mt:Include module="フッター"$>
+</body>
+</html>

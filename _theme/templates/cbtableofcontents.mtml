@@ -1,0 +1,28 @@
+<mt:BlockEditorBlocks tag="EntryBody">
+
+<mt:If name="__first__">
+<div class="tableOfContents">
+<h3>目次</h3>
+<ul>
+</mt:If>
+
+<mt:If name="type" eq="custom-extdHeadingHTML">
+
+<mt:Ignore>見出しブロックで使われているタグを抽出</mt:Ignore>
+<mt:SetVarBlock name="headingClass"><mt:var name="__value__" regex_replace="/[\s\S]*?<(h[1-9])[\s\S]*/","$1"></mt:SetVarBlock>
+
+<mt:Ignore>h1〜h6タグの場合、li に class を付与し、アンカーID 付きのリンクテキストを生成</mt:Ignore>
+<mt:If name="headingClass" like="h1|h2|h3|h4|h5|h6">
+<mt:SetVarBlock name="idName"><mt:var name="__value__" regex_replace='/[\s\S]*?id="([^"]+)"[\s\S]*/',"$1"></mt:SetVarBlock>
+<mt:SetVarBlock name="headingText"><mt:var name="__value__" remove_html="1" strip_linefeeds="1" regex_replace="/^[\ \t\r\n]+/mg",""></mt:SetVarBlock>
+<li class="toc_<mt:Var name='headingClass'>"><a href="#<mt:Var name="idName">"><mt:Var name="headingText"></a></li>
+</mt:If>
+
+</mt:If>
+
+<mt:If name="__last__">
+</ul>
+</div>
+</mt:If>
+
+</mt:BlockEditorBlocks>

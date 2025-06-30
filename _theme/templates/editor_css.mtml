@@ -1,0 +1,457 @@
+<$mt:Include module="共通変数"$>
+/* reset */
+
+* {
+  box-sizing: border-box;
+}
+.entry, .page {
+  font: 16px 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  color: #343434;
+  line-height: 1.5;
+}
+.entry a:link, .page a:visited, .entry a:link, .page a:visited {
+	text-decoration: underline;
+	color: <$mt:Var name='main_color'$>;
+	transition: ease-in-out .2s;
+}
+
+.entry ul, .page ul {
+	margin: 2em 0;
+}
+.entry ul li, .page ul li {
+	padding-left: 2em;
+	text-indent: -1em;
+	list-style: none;
+}
+
+.entry ul li:before, .page ul li:before {
+	content: "●";
+	font-size: 6px;
+	color: <$mt:Var name='line_color'$>;
+	top: -3px;
+	margin-right: 6px;
+	position: relative;
+}
+
+.entry ol, .page ol {
+	margin: 2em 0;
+}
+
+.entry ol li, .page ol li {
+	padding-left: 2em;
+	margin-right: 1em;
+	text-indent: -1em;
+	list-style: inside decimal;
+}
+
+.entry ol.alphabet li, .page ol.alphabet li {
+	list-style-type: upper-alpha;
+}
+
+.entry ol.alphabet-small li, .page ol.alphabet-small li {
+	list-style-type: lower-latin;
+}
+
+.entry ol.hiragana li, .page ol.hiragana li {
+	list-style-type: hiragana;
+}
+
+.entry dl, .page dl {
+	margin: 1em;
+}
+.entry dl dt, .page dl dt {
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+.entry dl dd, .page dl dd {
+	margin: 0 0 1em 2em;
+}
+
+/* tips */
+.entry dl.tips, .page dl.tips {
+	margin: 2em 0;
+	padding: 1em;
+	position: relative;
+	border: <$mt:Var name='line_color'$> 1px solid;
+}
+
+.entry dl.tips dt, .page dl.tips dt {
+	display: inline-block;
+	margin-bottom: 0;
+	top: -28px;
+	left: -12px;
+	padding: 0 8px;
+	background-color: <$mt:Var name='bg_color'$>;
+	position: relative;
+	font-weight: bold;
+}
+
+.entry dl.tips dd, .page dl.tips dd {
+	display: block;
+	margin: -16px 0 0 0;
+}
+
+.entry dl.tips dd *:last-child, .page dl.tips dd *:last-child {
+	margin-bottom: 0;
+}
+
+/* table */
+.entry table, .page table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 2em;
+}
+
+.entry table th, .entry table td, .page table th, .page table td {
+	padding: 10px 0;
+	text-align: center;
+}
+
+.entry table th, .page table th {
+	background-color: <$mt:Var name='main_color'$>;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+}
+
+.entry table tr:nth-child(odd), .page table tr:nth-child(odd) {
+	background-color: <$mt:Var name='gray_color'$>;
+}
+.entry table tr:nth-child(odd) td, .page table tr:nth-child(odd) td {
+	border-bottom: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+}
+
+.entry h1, .page h1 {
+	margin-bottom: 15px;
+	font-size: 38px;
+	font-weight: bold;
+	clear: both;
+}
+
+.entry h1::before, .page h1::before {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	margin-right: 8px;
+	height: 38px;
+	background-color: <$mt:Var name='dark_color'$>;
+}
+
+.entry h2, .page h2 {
+	margin-bottom: 15px;
+	font-size: 35px;
+	font-weight: normal;
+	clear: both;
+}
+
+.entry h3, .page h3 {
+	display: block;
+	position: relative;
+	padding-left: 12px;
+	margin-bottom: 32px;
+	font-size: 28px;
+	font-weight: normal;
+	border-bottom: <$mt:Var name='line_color'$> 1px solid;
+	border-left: solid 12px <$mt:Var name='main_color'$>;
+	clear: both;
+}
+
+.entry h4, .page h4 {
+	margin-bottom: 16px;
+	font-size: 24px;
+	font-weight: bold;
+	position: relative;
+	padding-left: 20px;
+	clear: both;
+}
+
+.entry h4::before, .page h4::before {
+content: "";
+display: block;
+position: absolute;
+left: 0;
+top: 10px;
+background-color: <$mt:Var name='line_color'$>;
+width: 12px;
+height: 12px;
+}
+
+.entry h5, .page h5 {
+	margin-bottom: 12px;
+	font-size: 20px;
+	font-weight: bold;
+	color: <$mt:Var name='dark_color'$>;
+	clear: both;
+}
+.entry h6, .page h6 {
+	margin-bottom: 12px;
+	font-size: 16px;
+	font-weight: bold;
+	clear: both;
+}
+
+.entry p, .page p {
+	margin-bottom: 30px;
+	word-break: break-all;
+}
+
+.entry strong, .page strong {
+	background: <$mt:Var name='strong_color'$>;
+}
+
+.entry pre, .page pre {
+	margin-bottom: 30px;
+}
+
+.entry img, .page img {
+	display: inline-block;
+	margin-top: 15px;
+	max-width: 100%;
+	height: auto;
+}
+
+.entry .imgflex, .page .imgflex {
+	display: flex;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.entry .imgflex img, .page .imgflex img {
+	display: block;
+	margin-right: 12px;
+}
+.entry .imgflex img:last-child, .page .imgflex img:last-child {
+margin-right: 0;
+}
+.entry button, .page button {
+	color: #ffffff;
+	text-align: center;
+	font-size: 1rem;
+	background-color: <$mt:Var name='dark_color'$>;
+	border-color: <$mt:Var name='dark_color'$>;
+	display: inline-block;
+	margin-bottom: 30px;
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+	line-height: 1.5;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out,box-shadow .2s ease-in-out;
+}
+.entry button:hover, .page button:hover {
+		background-color: <$mt:Var name='text_color'$>;
+		border-color: <$mt:Var name='text_color'$>;
+		text-decoration: none;
+}
+
+.entry button.cv, .page button.cv {
+	width: 60%;
+	color: #ffffff;
+	background-color: #004B9A;
+	border-color: #004B9A;
+	display: block;
+	border-radius: 8px;
+	white-space: nowrap;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+}
+.entry button.cv:hover, .page button.cv:hover {
+		background-color: #003b79;
+		border-color: #003b79;
+		text-decoration: none;
+}
+
+.entry button.cv_small, .page button.cv_small {
+	color: #ffffff;
+	background-color: #004B9A;
+	border-color: #004B9A;
+	display: block;
+	border-radius: 8px;
+	white-space: nowrap;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	line-height: 1.5;
+}
+.entry button.cv_small:hover, .page button.cv_small:hover {
+		background-color: #003b79;
+		border-color: #003b79;
+		text-decoration: none;
+}
+
+.entry figure, .page figure {
+	width: fit-content;
+	margin: 0 auto 30px;
+}
+
+.entry figcaption, .page figcaption {
+	font-size: 14px;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	padding: 8px;
+	line-height: 14px;
+	background-color: <$mt:Var name='gray_color'$>;
+}
+
+.entry blockquote, .page blockquote {
+	position: relative;
+	padding: 35px 45px;
+	margin-bottom: 30px;
+	background: <$mt:Var name='gray_color'$>;
+}
+.entry blockquote:before, .page blockquote:before {
+	content: "";
+	position: absolute;
+	width: 22px;
+	height: 20px;
+	top: 16px;
+	left: 16px;
+	background-image: url(<$mt:BlogURL encode_html="1"$>common/images/quote.svg);
+	background-size: contain;
+	vertical-align: middle;
+}
+.entry blockquote:after, .page blockquote:after {
+	content: "";
+	position: absolute;
+	width: 22px;
+	height: 20px;
+	bottom: 16px;
+	right: 16px;
+	background-image: url(<$mt:BlogURL encode_html="1"$>common/images/quote_end.svg);
+	background-size: contain;
+	vertical-align: middle;
+}
+
+.entry blockquote footer, .page blockquote footer {
+	background-color: inherit;
+	color: <$mt:Var name='text_color'$>;
+	border-top: 1px solid <$mt:Var name='line_color'$>;
+	padding-top: 16px;
+}
+
+.entry .conversation, .page .conversation {
+	width: 100%;
+	margin: 0 auto;
+}
+.entry .conversation dt, .page .conversation dt {
+	float: right;
+}
+.entry .conversation dt.moderator, .page .conversation dt.moderator {
+	float: left;
+}
+.entry .userpic, .page .userpic {
+	width: 74px;
+	height: auto;
+}
+.entry .userpic img, .page .userpic img {
+	margin-top: 0;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.entry .userpic .name, .page .userpic .name {
+	font-size: 0.75rem;
+	margin-top: 8px;
+	text-align: center;
+}
+
+.entry .speaker01, .entry .speaker02, .entry .speaker03, .entry .speaker04, .page .speaker01, .page .speaker02, .page .speaker03, .page .speaker04 {
+	font-weight: bold;
+	margin-right: 0.25rem;
+}
+.entry .speaker01:before, .entry .speaker02:before, .entry .speaker03:before, .entry .speaker04:before, .page .speaker01:before, .page .speaker02:before, .page .speaker03:before, .page .speaker04:before {
+	content: "\f007";
+	font-family: "Font Awesome 5 Free";
+	margin-right: 2px;
+	font-weight: 900;
+}
+
+.entry .speaker01:before, .page .speaker01:before {
+	color: #3DC7BE;
+}
+.entry .speaker02:before, .page .speaker02:before {
+	color: #F7B760;
+}
+.entry .speaker03:before, .page .speaker03:before {
+	color: #ffaacc;
+}
+.entry .speaker04:before, .page .speaker04:before {
+	color: #5fc6f1;
+}
+
+.entry .speaker01:after, .entry .speaker02:after, .entry .speaker03:after, .entry .speaker04:after, .page .speaker01:after, .page .speaker02:after, .page .speaker03:after, .page .speaker04:after {
+	content: "：";
+	margin-left: 0.25rem;
+}
+
+.entry .conversation dd, .page .conversation dd {
+	position: relative;
+	padding: 1em;
+	margin: 0px 96px 1em 0px;
+	background-color: <$mt:Var name='gray_color'$>;
+	border-radius: 8px;
+}
+.entry .conversation .moderator + dd, .page .conversation .moderator + dd {
+	margin: 0px 0px 1em 96px;
+	background-color: #dcf7f5;
+}
+.entry .conversation dd:after, .page .conversation dd:after {
+	content: "";
+	position: absolute;
+	right: -15px;
+	top: 20px;
+	width: 0px;
+	height: 0px;
+	border-top: 15px solid <$mt:Var name='gray_color'$>;
+	border-right: 15px solid transparent;
+}
+.entry .conversation .moderator + dd:after, .page .conversation .moderator + dd:after {
+	left: -15px;
+	border-top: 15px solid #dcf7f5;
+	border-right: 0px none;
+	border-left: 15px solid transparent;
+}
+.entry .conversation dd p, .page .conversation dd p {
+	margin: 0.5em 0px;
+}
+.entry hr, .page hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid <$mt:Var name='line_color'$>;
+	margin: 1em 0;
+	padding: 0;
+}
+
+@media(max-width:768px) {
+	.entry .userpic, .page .userpic {
+		width: 54px;
+		height: auto;
+	}
+	.entry .userpic img, .page .userpic img {
+		margin-top: 0;
+		width: 52px;
+		height: 52px;
+	}
+	.entry .userpic .name, .page .userpic .name {
+		font-size: 10px;
+	}
+
+	.entry .conversation dd, .page .conversation dd {
+		margin: 0px 76px 1em 0px;
+		padding: 0.5em 1em;
+	}
+	.entry .conversation .moderator + dd, .page .conversation .moderator + dd {
+		margin: 0px 0px 1em 76px;
+	}
+	.entry button.cv, .page button.cv {
+		width: 100%;
+	}
+}

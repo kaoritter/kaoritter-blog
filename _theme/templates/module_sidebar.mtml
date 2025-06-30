@@ -1,0 +1,94 @@
+<section>
+    <mt:SetVars>
+      blogid=<$mt:BlogID$>
+      blogurl=<$mt:BlogRelativeURL$>search.html
+    </mt:SetVars>
+    <$mt:SiteSearchSnippet blog_ids="$blogid" form_action="$blogurl" search_result_container="s-result"$>
+</section>
+
+<section id="side-about">
+  <h2>このサイトについて</h2>
+<p><a href="https://www.kaoritter.com/aboutme.html">壽かおり（ことぶき かおり）</a>です。毎日リモートワークで働く、IT企業の広報担当。ネットサービスやガジェット好きです。<br />著書『<a href="https://amzn.to/352EnYe">リモートワーク大全</a>』</p>
+</section>
+
+<section id="side-about" class="follow-action">
+  <h2>お問合せフォーム</h2>
+  <ul><li class="facebook"><a href="https://www.kaoritter.com/inquiry.html"><i class="far fa-envelope"></i>連絡する</a></li></ul>
+</section>
+
+<mt:If tag="PushNotificationEnabled">
+<a href="javascript:void(0)" class="webpush" onclick="MT.PushNotification.openSubscriptionModal()">
+  <div class="side-webpush"><span class="side-webpush__txt">Webプッシュ通知の購読</span></div>
+</a>
+</mt:If>
+<section id="side-follow" class="follow-action">
+  <$mt:Include module="フォローアクション"$>
+</section><!-- follow-action -->
+
+
+
+<mt:Entries limit="5" field:entry_recommend="1">
+<mt:EntriesHeader>
+<section id="side-recentpost" class="side-entrylist">
+    <h2>イチオシ記事</h2>
+    <ul>
+</mt:EntriesHeader>
+      <li>
+        <a href="<$mt:EntryPermalink$>">
+          <figure>
+            <img src="<mt:If tag="CustomFieldValue" identifier="blog_entry_ogp_image"><mt:CustomFieldAsset identifier="blog_entry_ogp_image"><$mt:AssetThumbnailURL$></mt:CustomFieldAsset><mt:Else><mt:EntryAssets type="image" sort_order="ascend" limit="1"><$mt:AssetThumbnailURL$><mt:Else><$mt:BlogRelativeURL$>common/images/noimage-90.png</mt:EntryAssets></mt:If>" alt="<$mt:EntryTitle escape='html'$>" class="entry-thumbnail">
+          </figure>
+          <h3><$mt:EntryTitle escape="html"$></h3>
+        </a>
+      </li>
+<mt:EntriesFooter>
+      </ul>
+</section>
+ </mt:EntriesFooter>
+</mt:Entries>
+
+  <section id="side-categories" class="categorylist">
+  <nav>
+  <h2>カテゴリ</h2>
+  <ul>
+      <mt:TopLevelCategories>
+      <mt:If tag="CategoryCount">
+      <li><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel encode_html="1"$></a><span>（<$mt:ArchiveCount$>）</span>
+      <mt:Else>
+      <li><p class="nolink"><$mt:CategoryLabel encode_html="1"$></p>
+      </mt:If>
+      <mt:SubCategories>
+      <mt:SubCatIsFirst><ul class="submenu"></mt:SubCatIsFirst>
+      <mt:If tag="CategoryCount">
+      <li class="catdepth-<$mt:CategoryDepth$>"><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel encode_html="1"$></a><span>（<$mt:ArchiveCount$>）</span>
+      <mt:Else>
+      <li class="catdepth-<$mt:CategoryDepth$>"><p class="nolink"><$mt:CategoryLabel encode_html="1"$></p>
+      </mt:If>
+      <$mt:SubCatsRecurse$></li>
+      <mt:SubCatIsLast></ul></mt:SubCatIsLast>
+      </mt:SubCategories>
+      </li>
+      </mt:TopLevelCategories>
+  </ul>
+  
+</nav>
+</section>
+
+<mt:ArchiveList archive_type="Yearly">
+  <mt:ArchiveListHeader>
+  <section id="side-recentpost" class="categorylist">
+  <nav>
+    <h2>年別アーカイブ</h2>
+    <ul>
+  </mt:ArchiveListHeader>
+      <li><a href="<$mt:ArchiveLink$>"><$mt:ArchiveTitle escape="html"$></a><span>（<$mt:ArchiveCount$>）</span></li>
+  <mt:ArchiveListFooter> 
+    </ul>   
+  </nav>
+  </section>
+  </mt:ArchiveListFooter>
+</mt:ArchiveList>
+
+<section id="side-about">
+<p><a href="https://movabletype.net/"><img src="https://www.kaoritter.com/.assets/powerdbymtnet.svg" alt="powerdbymtnet.svg"></a></p>
+</section>

@@ -1,0 +1,62 @@
+  <footer>
+    <div class="inner clearfix">
+      <section class="footer-about">
+        <h1><$mt:BlogName$></h1>
+        <p><$mt:Var name='footer_text'$></p>
+        <nav role="navigation" class="footer-navi">
+            <ul id="fade-in" class="dropmenu">
+              <mt:TopLevelCategories>
+    	          <mt:If tag="CategoryCount">
+      	          <li class="catdepth-base"><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel encode_html="1"$></a>
+      	          <mt:Else>
+      	          <li class="catdepth-base"><span class="nolink"><$mt:CategoryLabel encode_html="1"$></span>
+      	          </mt:If>
+      	          <mt:SubCategories>
+      	          <mt:SubCatIsFirst><ul></mt:SubCatIsFirst>
+      	          <mt:If tag="CategoryCount">
+      	          <li class="catdepth-<$mt:CategoryDepth$>"><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel encode_html="1"$></a>
+      	          <mt:Else>
+      	          <li class="catdepth-<$mt:CategoryDepth$>"><span class="nolink"><$mt:CategoryLabel encode_html="1"$></span>
+      	          </mt:If>
+      	          <$mt:SubCatsRecurse$></li>
+      	          <mt:SubCatIsLast></ul></mt:SubCatIsLast>
+      	          </mt:SubCategories>
+      	          </li>
+    	          </mt:TopLevelCategories>
+              <mt:TopLevelFolders>
+				        <li>
+				          <a class="folder-label" data-dropdown="menu-<$mt:FolderBasename$>" aria-controls="menu-<$mt:FolderBasename$>" aria-expanded="false"><$mt:FolderLabel encode_html="1"$></a>
+				          <ul data-dropdown-content aria-hidden="true" tabindex="-1">
+				          <mt:Pages sort_order="ascend">
+				            <li><a href="<$mt:PagePermalink$>"><$mt:PageTitle encode_html="1"$></a></li>
+				          </mt:Pages>
+				          <mt:SubFolders>
+				          <li><span class="folder-label"><$mt:FolderLabel encode_html="1"$></span></li>
+				          <mt:Pages sort_order="ascend">
+				            <li class="depth-<$mt:FolderDepth$>"><a href="<$mt:PagePermalink$>" class="page-link"><$mt:PageTitle encode_html="1"$></a></li>
+				          </mt:Pages>
+				          <$mt:SubFolderRecurse$>
+				          </mt:SubFolders>
+				          </ul>
+				        </li>
+				    </mt:TopLevelFolders>
+						<mt:Pages no_folder="1" sort_order="ascend">
+		        <li><a href="<$mt:PagePermalink$>"><$mt:PageTitle encode_html="1"$></a></li>
+		        </mt:Pages>
+          </ul>
+        </nav>
+      </section>
+      <section class="footer-social">
+        <$mt:Include module="フッター（ソーシャルボタン）"$>
+      </section>
+      <!-- <p class="footer-copyright">
+         <$mt:Var name='copyright'$>
+      </p> -->
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="<$mt:BlogURL encode_html="1"$>common/js/main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/docco.min.css" integrity="sha256-zfwdg38tZUAhO39t5ZUt35aSlqBHl+4zm09CcXgTSoc=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<$mt:ServiceWorkerSnippet pn_auto_spawn="0"$>
